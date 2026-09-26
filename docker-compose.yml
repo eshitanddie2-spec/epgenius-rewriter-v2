@@ -1,0 +1,12 @@
+services:
+  epgenius-rewriter-v2:
+    build: .
+    container_name: epgenius-rewriter-v2
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "38091:8080"
+    volumes:
+      - ./data:/data
+      - ./work:/work

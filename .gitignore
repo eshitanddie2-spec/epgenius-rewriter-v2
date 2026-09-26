@@ -1,0 +1,30 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Generated/runtime data
+data/
+work/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# Local backups / temporary files
+*.backup
+*.bak
+*.old
+*.tmp
+*.zip
+epgenius_rewriter.py.before-*
+epgenius-rewriter-v2/
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
+sample/epgenius.m3u
