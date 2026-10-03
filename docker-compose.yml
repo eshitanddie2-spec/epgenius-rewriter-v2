@@ -1,0 +1,20 @@
+services:
+  epgenius-rewriter-v2:
+    build: .
+    container_name: epgenius-rewriter-v2
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    volumes:
+      - ./data:/data
+      - ./work:/work
+
+    networks:
+      - m3u-network
+
+networks:
+  m3u-network:
+    external: true
+    name: m3u-vps_m3u-network
